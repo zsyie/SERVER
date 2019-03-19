@@ -5,7 +5,7 @@
 #include <string.h> 
 #include <unistd.h> 
 #include <arpa/inet.h>
-#define PORT 5132
+#define PORT 6132
    
 int main(int argc, char const *argv[]) 
 { 
@@ -38,7 +38,7 @@ int main(int argc, char const *argv[])
         return -1; 
     } 
     send(sock , hello , strlen(hello) , 0 ); 
-    printf("Annyonghaseyo"); 
+    printf("Annyeonghaseyo ^_^ "); 
     valread = read( sock , buffer, 1024); 
     printf("%s\n",buffer ); 
     return 0; 
