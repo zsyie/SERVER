@@ -15,12 +15,12 @@ public class Server
         try
         { 
             server = new ServerSocket(port); 
-            System.out.println("Server started"); 
+            System.out.println("Server is starting"); 
   
-            System.out.println("Waiting for a client ..."); 
+            System.out.println("Wait for client to connect ..."); 
   
             socket = server.accept(); 
-            System.out.println("Client accepted"); 
+            System.out.println("Client finished"); 
   
             // takes input from the client socket 
             in = new DataInputStream( 
@@ -42,7 +42,7 @@ public class Server
                     System.out.println(i); 
                 } 
             } 
-            System.out.println("Closing connection"); 
+            System.out.println("Close connection"); 
   
             // close connection 
             socket.close(); 
@@ -56,6 +56,6 @@ public class Server
   
     public static void main(String args[]) 
     { 
-        Server server = new Server(5678); 
+        Server server = new Server(5132); 
     } 
 } 
